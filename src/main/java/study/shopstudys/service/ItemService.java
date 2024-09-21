@@ -16,4 +16,25 @@ public class ItemService {
     public List<Item> findAll() {
         return itemRepository.findAll();
     }
+
+    public void save(String title, Long price) {
+
+        validation(title,price);
+
+        Item item = Item.builder()
+                .title(title)
+                .price(price)
+                .build();
+
+        itemRepository.save(item);
+
+    }
+
+    private void validation(String title, Long price) {
+
+        if (title == null || price == null) {
+            throw new RuntimeException("제목이나 가격은 반드시 입력해야 합니다.");
+        }
+
+    }
 }
