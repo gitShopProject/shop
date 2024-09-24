@@ -12,7 +12,6 @@ public class ShopStudysApplication {
     public static void main(String[] args) {
         SpringApplication.run(ShopStudysApplication.class, args);
         Item item = new Item();
-
     }
 
 }
