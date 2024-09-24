@@ -48,6 +48,11 @@ public class ItemController {
         }
     }
 
+    @GetMapping("/edit{id}")
+    String edit(@PathVariable Long id, Model model) {
+        return "edit.html";
+    }
+
     @GetMapping("/detail2/{id}")
     String detail2(@PathVariable Long id, Model model) throws Exception {
         throw new Exception();
