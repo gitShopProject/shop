@@ -13,6 +13,7 @@ public class ShopStudysApplication {
     public static void main(String[] args) {
         SpringApplication.run(ShopStudysApplication.class, args);
         ItemService itemService = new ItemService("???");
+        Item item = new Item();
     }
 
 }
